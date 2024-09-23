@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "dailyverses/bible-verse-of-the-day",
+  "version": "0.1.0",
+  "title": "Bible verse of the day",
+  "category": "widgets",
+  "icon": "format-quote",
+  "description": "The daily Bible verse or a random Bible verse on your website, from DailyVerses.net",
+  "attributes": {
+    "translation": {
+      "type": "string",
+      "default": "niv"
+    },
+    "israndom": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "supports": {
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    },
+    "color": {
+      "text": true,
+      "link": true,
+      "background": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "html": false
+  },
+  "textdomain": "bible-verse-of-the-day",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
