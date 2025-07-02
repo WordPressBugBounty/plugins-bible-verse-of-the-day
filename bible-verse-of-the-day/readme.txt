@@ -3,16 +3,16 @@ Contributors: dailyverses,luckylab
 Donate link: https://dailyverses.net/donate
 Tags: bible, verse, day, daily, verses, everyday, widget, bijbel, tekst, bijbeltekst, dagelijks, dag, random, willekeurige, bibelverse, bibel, zufalls, bibelvers, tages, versiculo, verso, biblia, azar, dia, versiculos, diario, bíblia, aleatória, nbv, nvi, niv, kjv, lut, esv, rvr95, rvr60, bgt, nbg, neu, arc, cep, bds, reina, valera, almeida, luther, king, james, gewone, taal, versetto, versetti, giorno, casuale, bibbia, náhodný, biblický, verš
 Requires at least: 5.3
-Tested up to: 6.6
+Tested up to: 6.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Shows the daily inspiring Bible verse or a random Bible verse from DailyVerses.net. In English, Spanish, Portuguese, German, French, Italian, Polish, Arabic, Dutch, Afrikaans, Bengali, Chinese (traditional), Czech, Danish, Finnish, Greek, Hindi, Malagasy, Persian, Russian, Slovak, Southern Sotho, Urdu, Xhosa and Zulu.
+Shows the daily inspiring Bible verse or a random Bible verse from DailyVerses.net. In English, Spanish, Portuguese, German, French, Italian, Polish, Arabic, Dutch, Afrikaans, Bengali, Chinese (traditional), Czech, Danish, Finnish, Greek, Hindi, Hungarian, Malagasy, Persian, Russian, Slovak, Southern Sotho, Urdu, Xhosa and Zulu.
 
 == Description ==
 
-This plugins shows a daily Bible verse or a random Bible verse from [DailyVerses.net](https://dailyverses.net). The plugin also supports [Spanish](https://dailyverses.net/es), [Portuguese](https://dailyverses.net/pt), [German](https://dailyverses.net/de), [French](https://dailyverses.net/fr), [Italian](https://dailyverses.net/it), [Polish](https://dailyverses.net/pl), [Arabic](https://dailyverses.net/ar), [Dutch](https://dailyverses.net/nl), [Afrikaans](https://dailyverses.net/af), [Bengali](https://dailyverses.net/bn), [Chinese (traditional)](https://dailyverses.net/tc), [Czech](https://dailyverses.net/cs), [Danish](https://dailyverses.net/da), [Finnish](https://dailyverses.net/fi), [Greek](https://dailyverses.net/el), [Hindi](https://dailyverses.net/hi), [Malagasy](https://dailyverses.net/mg), [Persian](https://dailyverses.net/fa), [Russian](https://dailyverses.net/ru), [Slovak](https://dailyverses.net/sk), [Southern Sotho](https://dailyverses.net/st), [Urdu](https://dailyverses.net/ur), [Xhosa](https://dailyverses.net/xh) and [Zulu](https://dailyverses.net/zu) Bible verses. 
+This plugins shows a daily Bible verse or a random Bible verse from [DailyVerses.net](https://dailyverses.net). The plugin also supports [Spanish](https://dailyverses.net/es), [Portuguese](https://dailyverses.net/pt), [German](https://dailyverses.net/de), [French](https://dailyverses.net/fr), [Italian](https://dailyverses.net/it), [Polish](https://dailyverses.net/pl), [Arabic](https://dailyverses.net/ar), [Dutch](https://dailyverses.net/nl), [Afrikaans](https://dailyverses.net/af), [Bengali](https://dailyverses.net/bn), [Chinese (traditional)](https://dailyverses.net/tc), [Czech](https://dailyverses.net/cs), [Danish](https://dailyverses.net/da), [Finnish](https://dailyverses.net/fi), [Greek](https://dailyverses.net/el), [Hindi](https://dailyverses.net/hi), [Hungarian](https://dailyverses.net/hu), [Malagasy](https://dailyverses.net/mg), [Persian](https://dailyverses.net/fa), [Russian](https://dailyverses.net/ru), [Slovak](https://dailyverses.net/sk), [Southern Sotho](https://dailyverses.net/st), [Urdu](https://dailyverses.net/ur), [Xhosa](https://dailyverses.net/xh) and [Zulu](https://dailyverses.net/zu) Bible verses. 
 
 The plugin can be used as a widget, so it's easy to install. After installing the plugin you will have two widgets: 'Bible verse of the day' and 'Random Bible verse'. You can also use tags: [bibleverseoftheday_niv] and [randombibleverse_niv], replace 'niv' with another translation if necessary, see list below.
 
@@ -22,6 +22,7 @@ If the connection to [DailyVerses.net](https://dailyverses.net) for some reason 
 
 * English Standard Version (esv)
 * King James Version (kjv)
+* New American Standard Bible 2020 (nasb)
 * New Catholic Bible (ncb)
 * New International Version (niv)
 * New King James Version (nkjv)
@@ -61,6 +62,7 @@ If the connection to [DailyVerses.net](https://dailyverses.net) for some reason 
 
 **Polish (Polski) - Biblijny werset dnia - Losowy werset Biblii**
 
+* Biblia Warszawska 1975 (bw1975)
 * Uwspółcześniona Biblia Gdańska (ubg)
 
 **Arabic (عربى) - آية الكتاب المقدس اليومية - ايات مختارة**
@@ -101,6 +103,7 @@ If the connection to [DailyVerses.net](https://dailyverses.net) for some reason 
 
 **Finnish (Suomi) - Päivän Raamatun jae - Satunnainen Raamatun jae**
 
+* Kirkkoraamattu 1933/1938 (kr38)
 * Raamattu 1992 (kr92)
 
 **Greek (Ελληνικά) - Βίβλος στίχος της ημέρας - Τυχαία Βίβλος στίχος**
@@ -110,6 +113,10 @@ If the connection to [DailyVerses.net](https://dailyverses.net) for some reason 
 **Hindi (हिन्दी) - दिन की बाइबिल कविता - रैंडम बाइबिल पद्य**
 
 * पवित्र बाइबिल (hhbd)
+
+**Hungarian (Magyar) - A napi bibliai ige - Véletlenszerű bibliai idézet**
+
+* Magyar Bibliatársulat újfordítású Bibliája (uf)
 
 **Malagasy - Andinin-teny ao amin'ny Baiboly androany - Andinin-teny ao amin'ny Baiboly**
 

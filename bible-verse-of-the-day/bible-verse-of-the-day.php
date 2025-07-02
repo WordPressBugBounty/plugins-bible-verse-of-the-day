@@ -206,6 +206,10 @@ function get_default_verse($language)
 	{
 		return '<div class="dailyVerses bibleText">For God so loved the world that he gave his only Son, so that everyone who believes in him may not perish but may attain eternal life.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/john/3/16/ncb" target="_blank" rel="noopener">John 3:16</a></div>';
 	}
+	else if($language == "nasb")
+	{
+		return '<div class="dailyVerses bibleText">For God so loved the world, that He gave His only Son, so that everyone who believes in Him will not perish, but have eternal life.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/john/3/16/nasb" target="_blank" rel="noopener">John 3:16</a></div>';
+	}
 	else if($language == "nl" || $language == "nbv")
 	{
 		return '<div class="dailyVerses bibleText">Want God had de wereld zo lief dat Hij zijn enige Zoon heeft gegeven, opdat iedereen die in Hem gelooft niet verloren gaat, maar eeuwig leven heeft.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/nl/johannes/3/16" target="_blank" rel="noopener">Johannes 3:16</a></div>';
@@ -294,6 +298,10 @@ function get_default_verse($language)
 	{
 		return '<div class="dailyVerses bibleText">Jumala on rakastanut maailmaa niin paljon, että antoi ainoan Poikansa, jottei yksikään, joka häneen uskoo, joutuisi kadotukseen, vaan saisi iankaikkisen elämän.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/fi/johannes/3/16" target="_blank" rel="noopener">Johannes 3:16</a></div>';
 	}
+	else if($language == "kr38")
+	{
+		return '<div class="dailyVerses bibleText">Sillä niin on Jumala maailmaa rakastanut, että hän antoi ainokaisen Poikansa, ettei yksikään, joka häneen uskoo, hukkuisi, vaan hänellä olisi iankaikkinen elämä.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/fi/johannes/3/16/kr38" target="_blank" rel="noopener">Johannes 3:16</a></div>';
+	}
 	else if($language == "cuvs")
 	{
 		return '<div class="dailyVerses bibleText">神 爱 世 人 ， 甚 至 将 他 的 独 生 子 赐 给 他 们 ， 叫 一 切 信 他 的 ， 不 至 灭 亡 ， 反 得 永 生 。</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/tc/%e7%b4%84%e7%bf%b0%e7%a6%8f%e9%9f%b3/3/16/cuvs" target="_blank" rel="noopener">约 翰 福 音 3:16</a></div>';
@@ -329,6 +337,10 @@ function get_default_verse($language)
 	else if($language == "ubg")
 	{
 		return '<div class="dailyVerses bibleText">Tak bowiem Bóg umiłował świat, że dał swego jednorodzonego Syna, aby każdy, kto w niego wierzy, nie zginął, ale miał życie wieczne.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/pl/jana/3/16" target="_blank" rel="noopener">Jana 3:16</a></div>';
+	}
+	else if($language == "bw1975")
+	{
+		return '<div class="dailyVerses bibleText">Albowiem tak Bóg umiłował świat, że Syna swego jednorodzonego dał, aby każdy, kto weń wierzy, nie zginął, ale miał żywot wieczny.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/pl/jana/3/16/bw1975" target="_blank" rel="noopener">Jana 3:16</a></div>';
 	}
 	else if($language == "tgv")
 	{
@@ -374,6 +386,10 @@ function get_default_verse($language)
 	{
 		return '<div class="dailyVerses bibleText">Fa toy izao no nitiavan’Andriamanitra izao tontolo izao: nomeny ny Zanani-lahy Tokana, mba tsy ho very izay rehetra mino Azy, fa hanana fiainana mandrakizay.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/mg/jaona/3/16" target="_blank" rel="noopener">Jaona 3:16</a></div>';
 	}
+	else if($language == "uf")
+	{
+		return '<div class="dailyVerses bibleText">Mert úgy szerette Isten a világot, hogy egyszülött Fiát adta, hogy aki hisz őbenne, el ne vesszen, hanem örök élete legyen.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/hu/janos/3/16" target="_blank" rel="noopener">János 3:16</a></div>';
+	}
 
 	//niv
 	return '<div class="dailyVerses bibleText">For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/john/3/16" target="_blank" rel="noopener">John 3:16</a></div>';
@@ -414,7 +430,7 @@ function get_language_url($language)
 	{
 		return '/fr';
 	}
-	else if($language == 'fi' || $language == 'kr92')
+	else if($language == 'fi' || $language == 'kr92' || $language == 'kr38')
 	{
 		return '/fi';
 	}
@@ -438,7 +454,7 @@ function get_language_url($language)
 	{
 		return '/af';
 	}
-	else if($language == 'ubg')
+	else if($language == 'ubg' || $language == 'bw1975')
 	{
 		return '/pl';
 	}
@@ -482,6 +498,10 @@ function get_language_url($language)
 	{
 		return '/mg';
 	}
+	else if($language == 'uf')
+	{
+		return '/hu';
+	}
 	
 	return '';
 }
@@ -507,6 +527,8 @@ add_shortcode('bibleverseoftheday_web', 'bible_verse_of_the_day_web');
 add_shortcode('randombibleverse_web', 'random_bible_verse_web'); 
 add_shortcode('bibleverseoftheday_ncb', 'bible_verse_of_the_day_ncb'); 
 add_shortcode('randombibleverse_ncb', 'random_bible_verse_ncb'); 
+add_shortcode('bibleverseoftheday_nasb', 'bible_verse_of_the_day_nasb'); 
+add_shortcode('randombibleverse_nasb', 'random_bible_verse_nasb'); 
 
 //nl
 add_shortcode('bibleverseoftheday_nl', 'bible_verse_of_the_day_nbv'); 
@@ -583,6 +605,8 @@ add_shortcode('bibleverseoftheday_fi', 'bible_verse_of_the_day_kr92');
 add_shortcode('randombibleverse_fi', 'random_bible_verse_kr92'); 
 add_shortcode('bibleverseoftheday_kr92', 'bible_verse_of_the_day_kr92'); 
 add_shortcode('randombibleverse_kr92', 'random_bible_verse_kr92'); 
+add_shortcode('bibleverseoftheday_kr38', 'bible_verse_of_the_day_kr38'); 
+add_shortcode('randombibleverse_kr38', 'random_bible_verse_kr38'); 
 
 //tc
 add_shortcode('bibleverseoftheday_cuvs', 'bible_verse_of_the_day_cuvs'); 
@@ -613,6 +637,8 @@ add_shortcode('randombibleverse_afr53', 'random_bible_verse_afr53');
 //pl
 add_shortcode('bibleverseoftheday_ubg', 'bible_verse_of_the_day_ubg'); 
 add_shortcode('randombibleverse_ubg', 'random_bible_verse_ubg'); 
+add_shortcode('bibleverseoftheday_bw1975', 'bible_verse_of_the_day_bw1975'); 
+add_shortcode('randombibleverse_bw1975', 'random_bible_verse_bw1975'); 
 
 //el
 add_shortcode('bibleverseoftheday_tgv', 'bible_verse_of_the_day_tgv'); 
@@ -656,6 +682,10 @@ add_shortcode('randombibleverse_da1871', 'random_bible_verse_da1871');
 add_shortcode('bibleverseoftheday_mg1865', 'bible_verse_of_the_day_mg1865'); 
 add_shortcode('randombibleverse_mg1865', 'random_bible_verse_mg1865'); 
 
+//hu
+add_shortcode('bibleverseoftheday_uf', 'bible_verse_of_the_day_uf'); 
+add_shortcode('randombibleverse_uf', 'random_bible_verse_uf'); 
+
 //en
 function bible_verse_of_the_day_niv() { return bible_verse_of_the_day('0', 'niv'); }
 function random_bible_verse_niv() { return random_bible_verse('0', 'niv'); }
@@ -673,6 +703,8 @@ function bible_verse_of_the_day_web() { return bible_verse_of_the_day('0', 'web'
 function random_bible_verse_web() { return random_bible_verse('0', 'web'); }
 function bible_verse_of_the_day_ncb() { return bible_verse_of_the_day('0', 'ncb'); }
 function random_bible_verse_ncb() { return random_bible_verse('0', 'ncb'); }
+function bible_verse_of_the_day_nasb() { return bible_verse_of_the_day('0', 'nasb'); }
+function random_bible_verse_nasb() { return random_bible_verse('0', 'nasb'); }
 
 //nl
 function bible_verse_of_the_day_nbv() { return bible_verse_of_the_day('0', 'nbv'); }
@@ -733,6 +765,8 @@ function random_bible_verse_bds() { return random_bible_verse('0', 'bds'); }
 //fi
 function bible_verse_of_the_day_kr92() { return bible_verse_of_the_day('0', 'kr92'); }
 function random_bible_verse_kr92() { return random_bible_verse('0', 'kr92'); }
+function bible_verse_of_the_day_kr38() { return bible_verse_of_the_day('0', 'kr38'); }
+function random_bible_verse_kr38() { return random_bible_verse('0', 'kr38'); }
 
 //tc
 function bible_verse_of_the_day_cuvs() { return bible_verse_of_the_day('0', 'cuvs'); }
@@ -763,6 +797,8 @@ function random_bible_verse_afr53() { return random_bible_verse('0', 'afr53'); }
 //pl
 function bible_verse_of_the_day_ubg() { return bible_verse_of_the_day('0', 'ubg'); }
 function random_bible_verse_ubg() { return random_bible_verse('0', 'ubg'); }
+function bible_verse_of_the_day_bw1975() { return bible_verse_of_the_day('0', 'bw1975'); }
+function random_bible_verse_bw1975() { return random_bible_verse('0', 'bw1975'); }
 
 //el
 function bible_verse_of_the_day_tgv() { return bible_verse_of_the_day('0', 'tgv'); }
@@ -806,6 +842,10 @@ function random_bible_verse_da1871() { return random_bible_verse('0', 'da1871');
 function bible_verse_of_the_day_mg1865() { return bible_verse_of_the_day('0', 'mg1865'); }
 function random_bible_verse_mg1865() { return random_bible_verse('0', 'mg1865'); }
 
+//hu
+function bible_verse_of_the_day_uf() { return bible_verse_of_the_day('0', 'uf'); }
+function random_bible_verse_uf() { return random_bible_verse('0', 'uf'); }
+
 function getLanguage() 
 {
 	$language = substr(get_locale(), 0, 2);
@@ -847,6 +887,7 @@ class DailyVersesWidget extends WP_Widget
 	<option value="neu" <?php _e($language == 'neu' ? 'selected' : ''); ?>>Deutsch - NeÜ</option>
 	<option value="esv" <?php _e($language == 'esv' ? 'selected' : ''); ?>>English - ESV</option>
 	<option value="kjv" <?php _e($language == 'kjv' ? 'selected' : ''); ?>>English - KJV</option>
+	<option value="nasb" <?php _e($language == 'nasb' ? 'selected' : ''); ?>>English - NASB</option>
 	<option value="ncb" <?php _e($language == 'ncb' ? 'selected' : ''); ?>>English - NCB</option>
 	<option value="niv" <?php _e($language == '' || $language == 'en' || $language == 'niv' ? 'selected' : ''); ?>>English - NIV</option>
 	<option value="nkjv" <?php _e($language == 'nkjv' ? 'selected' : ''); ?>>English - NKJV</option>
@@ -861,18 +902,21 @@ class DailyVersesWidget extends WP_Widget
 	<option value="sg21" <?php _e($language == 'fr' || $language == 'sg21' ? 'selected' : ''); ?>>Français - SG21</option>
 	<option value="cei" <?php _e($language == 'it' || $language == 'cei' ? 'selected' : ''); ?>>Italiano - CEI</option>
 	<option value="nr06" <?php _e($language == 'nr06' ? 'selected' : ''); ?>>Italiano - NR06</option>
+	<option value="uf" <?php _e($language == 'uf' ? 'selected' : ''); ?>>Magyar - UF</option>
 	<option value="mg1865" <?php _e($language == 'mg1865' ? 'selected' : ''); ?>>Malagasy - MG1865</option>
 	<option value="bb" <?php _e($language == 'bb' ? 'selected' : ''); ?>>Nederlands - BB</option>
 	<option value="bgt" <?php _e($language == 'bgt' ? 'selected' : ''); ?>>Nederlands - BGT</option>
 	<option value="hsv" <?php _e($language == 'hsv' ? 'selected' : ''); ?>>Nederlands - HSV</option>
 	<option value="nbg" <?php _e($language == 'nbg' ? 'selected' : ''); ?>>Nederlands - NBG</option>
 	<option value="nbv" <?php _e($language == 'nl' || $language == 'nbv' ? 'selected' : ''); ?>>Nederlands - NBV21</option>
+	<option value="bw1975" <?php _e($language == 'bw1975' ? 'selected' : ''); ?>>Polski - BW1975</option>
 	<option value="ubg" <?php _e($language == 'ubg' ? 'selected' : ''); ?>>Polski - UBG</option>
 	<option value="ara" <?php _e($language == 'ara' ? 'selected' : ''); ?>>Português - ARA</option>
 	<option value="arc" <?php _e($language == 'pt' || $language == 'arc' ? 'selected' : ''); ?>>Português - ARC</option>
 	<option value="nvi-pt" <?php _e($language == 'nvi-pt' ? 'selected' : ''); ?>>Português - NVI</option>
 	<option value="sso89" <?php _e($language == 'sso89' ? 'selected' : ''); ?>>Sesotho - SSO89</option>
 	<option value="kat" <?php _e($language == 'sk' || $language == 'kat' ? 'selected' : ''); ?>>Slovenský - KAT</option>
+	<option value="kr38" <?php _e($language == 'kr38' ? 'selected' : ''); ?>>Suomi - KR38</option>
 	<option value="kr92" <?php _e($language == 'fi' || $language == 'kr92' ? 'selected' : ''); ?>>Suomi - KR92</option>
 	<option value="xho96" <?php _e($language == 'xho96' ? 'selected' : ''); ?>>Xhosa - XHO96</option>
 	<option value="zul59" <?php _e($language == 'zul59' ? 'selected' : ''); ?>>Zulu - ZUL59</option>
@@ -970,6 +1014,7 @@ class RandomBibleVerseWidget extends WP_Widget
 	<option value="neu" <?php _e($language == 'neu' ? 'selected' : ''); ?>>Deutsch - NeÜ</option>
 	<option value="esv" <?php _e($language == 'esv' ? 'selected' : ''); ?>>English - ESV</option>
 	<option value="kjv" <?php _e($language == 'kjv' ? 'selected' : ''); ?>>English - KJV</option>
+	<option value="nasb" <?php _e($language == 'nasb' ? 'selected' : ''); ?>>English - NASB</option>
 	<option value="ncb" <?php _e($language == 'ncb' ? 'selected' : ''); ?>>English - NCB</option>
 	<option value="niv" <?php _e($language == '' || $language == 'en' || $language == 'niv' ? 'selected' : ''); ?>>English - NIV</option>
 	<option value="nkjv" <?php _e($language == 'nkjv' ? 'selected' : ''); ?>>English - NKJV</option>
@@ -984,18 +1029,21 @@ class RandomBibleVerseWidget extends WP_Widget
 	<option value="sg21" <?php _e($language == 'fr' || $language == 'sg21' ? 'selected' : ''); ?>>Français - SG21</option>
 	<option value="cei" <?php _e($language == 'it' || $language == 'cei' ? 'selected' : ''); ?>>Italiano - CEI</option>
 	<option value="nr06" <?php _e($language == 'nr06' ? 'selected' : ''); ?>>Italiano - NR06</option>
+	<option value="uf" <?php _e($language == 'uf' ? 'selected' : ''); ?>>Magyar - UF</option>
 	<option value="mg1865" <?php _e($language == 'mg1865' ? 'selected' : ''); ?>>Malagasy - MG1865</option>
 	<option value="bb" <?php _e($language == 'bb' ? 'selected' : ''); ?>>Nederlands - BB</option>
 	<option value="bgt" <?php _e($language == 'bgt' ? 'selected' : ''); ?>>Nederlands - BGT</option>
 	<option value="hsv" <?php _e($language == 'hsv' ? 'selected' : ''); ?>>Nederlands - HSV</option>
 	<option value="nbg" <?php _e($language == 'nbg' ? 'selected' : ''); ?>>Nederlands - NBG</option>
 	<option value="nbv" <?php _e($language == 'nl' || $language == 'nbv' ? 'selected' : ''); ?>>Nederlands - NBV21</option>
+	<option value="bw1975" <?php _e($language == 'bw1975' ? 'selected' : ''); ?>>Polski - BW1975</option>
 	<option value="ubg" <?php _e($language == 'ubg' ? 'selected' : ''); ?>>Polski - UBG</option>
 	<option value="ara" <?php _e($language == 'ara' ? 'selected' : ''); ?>>Português - ARA</option>
 	<option value="arc" <?php _e($language == 'pt' || $language == 'arc' ? 'selected' : ''); ?>>Português - ARC</option>
 	<option value="nvi-pt" <?php _e($language == 'nvi-pt' ? 'selected' : ''); ?>>Português - NVI</option>
 	<option value="sso89" <?php _e($language == 'sso89' ? 'selected' : ''); ?>>Sesotho - SSO89</option>
 	<option value="kat" <?php _e($language == 'sk' || $language == 'kat' ? 'selected' : ''); ?>>Slovenský - KAT</option>
+	<option value="kr38" <?php _e($language == 'kr38' ? 'selected' : ''); ?>>Suomi - KR38</option>
 	<option value="kr92" <?php _e($language == 'fi' || $language == 'kr92' ? 'selected' : ''); ?>>Suomi - KR92</option>
 	<option value="xho96" <?php _e($language == 'xho96' ? 'selected' : ''); ?>>Xhosa - XHO96</option>
 	<option value="zul59" <?php _e($language == 'zul59' ? 'selected' : ''); ?>>Zulu - ZUL59</option>
