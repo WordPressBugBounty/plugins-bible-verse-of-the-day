@@ -4,7 +4,7 @@
  * Description:       The daily Bible verse or a random Bible verse on your website, from DailyVerses.net
  * Requires at least: 5.3
  * Requires PHP:      7.0
- * Version:           2.7
+ * Version:           2.8
  * Author:            DailyVerses.net
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -61,7 +61,7 @@ function bible_verse_of_the_day($showlink, $language='niv', $isblock=false)
 
 	if($bibleVerseOfTheDay_Date != $bibleVerseOfTheDay_currentDate && $bibleVerseOfTheDay_lastAttempt < (date('U') - 3600))
 	{
-		$url = 'http://dailyverses.net/get/verse?language=' . $language . '&date=' . $bibleVerseOfTheDay_currentDate . '&url=' . $_SERVER['HTTP_HOST'] . '&type=daily2_7_4';
+		$url = 'https://dailyverses.net/get/verse?language=' . $language . '&date=' . $bibleVerseOfTheDay_currentDate . '&url=' . $_SERVER['HTTP_HOST'] . '&type=daily2_8';
 		$result = wp_remote_get($url);
 
 		update_option('bibleVerseOfTheDay_LastAttempt' . $languageAdd, date('U'));
@@ -123,7 +123,7 @@ function random_bible_verse($showlink, $language='niv', $isblock=false)
 
 	if($randomBibleVerse == "" && $randomBibleVerse_lastAttempt < (date('U') - 3600))
 	{
-		$url = 'http://dailyverses.net/get/random?language=' . $language . '&position=' . $position . '&url=' . $_SERVER['HTTP_HOST'] . '&type=random2_7_4';
+		$url = 'https://dailyverses.net/get/random?language=' . $language . '&position=' . $position . '&url=' . $_SERVER['HTTP_HOST'] . '&type=random2_8';
 		$result = wp_remote_get($url);
 
 		if(!is_wp_error($result)) 
@@ -232,7 +232,7 @@ function get_default_verse($language)
 	}
 	else if($language == "es" || $language == "nvi")
 	{
-		return '<div class="dailyVerses bibleText">Porque tanto amó Dios al mundo que dio a su Hijo unigénito, para que todo el que cree en él no se pierda, sino que tenga vida eterna.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/es/juan/3/16" target="_blank" rel="noopener">Juan 3:16</a></div>';
+		return '<div class="dailyVerses bibleText">Porque tanto amó Dios al mundo que dio a su Hijo único, para que todo el que cree en él no se pierda, sino que tenga vida eterna.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/es/juan/3/16" target="_blank" rel="noopener">Juan 3:16</a></div>';
 	}
 	else if($language == "rvr95")
 	{
@@ -252,7 +252,7 @@ function get_default_verse($language)
 	}
 	else if($language == "neu")
 	{
-		return '<div class="dailyVerses bibleText">Denn so hat Gott der Welt seine Liebe gezeigt: Er gab seinen einzigen Sohn, damit jeder, der an ihn glaubt, nicht ins Verderben geht, sondern ewiges Leben hat.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/de/johannes/3/16/neu" target="_blank" rel="noopener">Johannes 3:16</a></div>';
+		return '<div class="dailyVerses bibleText">Denn so hat Gott der Welt seine Liebe gezeigt: Er gab seinen einen und einzigartigen Sohn, damit jeder, der an ihn glaubt, nicht ins Verderben geht, sondern ewiges Leben hat.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/de/johannes/3/16/neu" target="_blank" rel="noopener">Johannes 3:16</a></div>';
 	}
 	else if($language == "elb")
 	{
@@ -285,6 +285,10 @@ function get_default_verse($language)
 	else if($language == "nr06")
 	{
 		return '<div class="dailyVerses bibleText">Perché Dio ha tanto amato il mondo, che ha dato il suo unigenito Figlio, affinché chiunque crede in lui non perisca, ma abbia vita eterna.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/it/giovanni/3/16/nr06" target="_blank" rel="noopener">Giovanni 3:16</a></div>';
+	}
+	else if($language == "lnd")
+	{
+		return '<div class="dailyVerses bibleText">Poiché Dio ha tanto amato il mondo, che ha dato il suo unigenito Figlio, affinché chiunque crede in lui non perisca, ma abbia vita eterna.</div><div class="dailyVerses bibleVerse"><a href="https://dailyverses.net/it/giovanni/3/16/lnd" target="_blank" rel="noopener">Giovanni 3:16</a></div>';
 	}
 	else if($language == "fr" || $language == "sg21")
 	{
@@ -422,7 +426,7 @@ function get_language_url($language)
 	{
 		return '/sk';
 	}
-	else if($language == 'it' || $language == 'cei' || $language == 'nr06')
+	else if($language == 'it' || $language == 'cei' || $language == 'nr06' || $language == 'lnd')
 	{
 		return '/it';
 	}
@@ -591,6 +595,8 @@ add_shortcode('bibleverseoftheday_cei', 'bible_verse_of_the_day_cei');
 add_shortcode('randombibleverse_cei', 'random_bible_verse_cei'); 
 add_shortcode('bibleverseoftheday_nr06', 'bible_verse_of_the_day_nr06'); 
 add_shortcode('randombibleverse_nr06', 'random_bible_verse_nr06'); 
+add_shortcode('bibleverseoftheday_lnd', 'bible_verse_of_the_day_lnd'); 
+add_shortcode('randombibleverse_lnd', 'random_bible_verse_lnd'); 
 
 //fr
 add_shortcode('bibleverseoftheday_fr', 'bible_verse_of_the_day_sg21'); 
@@ -755,6 +761,8 @@ function bible_verse_of_the_day_cei() { return bible_verse_of_the_day('0', 'cei'
 function random_bible_verse_cei() { return random_bible_verse('0', 'cei'); }
 function bible_verse_of_the_day_nr06() { return bible_verse_of_the_day('0', 'nr06'); }
 function random_bible_verse_nr06() { return random_bible_verse('0', 'nr06'); }
+function bible_verse_of_the_day_lnd() { return bible_verse_of_the_day('0', 'lnd'); }
+function random_bible_verse_lnd() { return random_bible_verse('0', 'lnd'); }
 
 //fr
 function bible_verse_of_the_day_sg21() { return bible_verse_of_the_day('0', 'sg21'); }
@@ -901,6 +909,7 @@ class DailyVersesWidget extends WP_Widget
 	<option value="bds" <?php _e($language == 'bds' ? 'selected' : ''); ?>>Français - BDS</option>
 	<option value="sg21" <?php _e($language == 'fr' || $language == 'sg21' ? 'selected' : ''); ?>>Français - SG21</option>
 	<option value="cei" <?php _e($language == 'it' || $language == 'cei' ? 'selected' : ''); ?>>Italiano - CEI</option>
+	<option value="lnd" <?php _e($language == 'lnd' ? 'selected' : ''); ?>>Italiano - LND</option>
 	<option value="nr06" <?php _e($language == 'nr06' ? 'selected' : ''); ?>>Italiano - NR06</option>
 	<option value="uf" <?php _e($language == 'uf' ? 'selected' : ''); ?>>Magyar - UF</option>
 	<option value="mg1865" <?php _e($language == 'mg1865' ? 'selected' : ''); ?>>Malagasy - MG1865</option>
@@ -1028,6 +1037,7 @@ class RandomBibleVerseWidget extends WP_Widget
 	<option value="bds" <?php _e($language == 'bds' ? 'selected' : ''); ?>>Français - BDS</option>
 	<option value="sg21" <?php _e($language == 'fr' || $language == 'sg21' ? 'selected' : ''); ?>>Français - SG21</option>
 	<option value="cei" <?php _e($language == 'it' || $language == 'cei' ? 'selected' : ''); ?>>Italiano - CEI</option>
+	<option value="lnd" <?php _e($language == 'lnd' ? 'selected' : ''); ?>>Italiano - LND</option>
 	<option value="nr06" <?php _e($language == 'nr06' ? 'selected' : ''); ?>>Italiano - NR06</option>
 	<option value="uf" <?php _e($language == 'uf' ? 'selected' : ''); ?>>Magyar - UF</option>
 	<option value="mg1865" <?php _e($language == 'mg1865' ? 'selected' : ''); ?>>Malagasy - MG1865</option>

@@ -3,7 +3,7 @@ Contributors: dailyverses,luckylab
 Donate link: https://dailyverses.net/donate
 Tags: bible, verse, day, daily, verses, everyday, widget, bijbel, tekst, bijbeltekst, dagelijks, dag, random, willekeurige, bibelverse, bibel, zufalls, bibelvers, tages, versiculo, verso, biblia, azar, dia, versiculos, diario, bíblia, aleatória, nbv, nvi, niv, kjv, lut, esv, rvr95, rvr60, bgt, nbg, neu, arc, cep, bds, reina, valera, almeida, luther, king, james, gewone, taal, versetto, versetti, giorno, casuale, bibbia, náhodný, biblický, verš
 Requires at least: 5.3
-Tested up to: 6.8
+Tested up to: 6.9
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -58,6 +58,7 @@ If the connection to [DailyVerses.net](https://dailyverses.net) for some reason 
 **Italian (Italiano) - Versetto della Bibbia del Giorno - Versetto casuale della Bibbia**
 
 * Conferenza Episcopale Italiana (cei)
+* La Nuova Diodati 1991 (lnd)
 * Nuova Riveduta 2006 (nr06)
 
 **Polish (Polski) - Biblijny werset dnia - Losowy werset Biblii**
@@ -170,6 +171,10 @@ This section describes how to install the plugin and get it working.
 3. A wordpress site with the plugin in the sidebar.
 
 == Changelog ==
+
+= 2.8 =
+* Added block support
+* Added several languages and Bible translations
 
 = 2.7 =
 * Added New King James Version (NKJV)
